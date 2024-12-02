@@ -1,0 +1,501 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hacer que el cuerpo ocupe toda la altura de la ventana */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo siempre ocupe toda la altura */
+    margin: 0;
+    font-family: 'Comfortaa', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Contenedor principal para el contenido de la página */
+main {
+    flex: 1; /* Esto permite que el contenido principal ocupe todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabecera */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.3); Fondo inicial semitransparente */
+    color: white;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos de la cabecera al hacer scroll */
+.main-header.scrolled {
+    background-color: rgba(210, 180, 140, 0.980); /* Color sólido al hacer scroll */
+    color: #333; /* Cambia el color del texto al hacer scroll */
+}
+
+.main-header.scrolled a {
+    color: #333; /* Cambia el color de los enlaces */
+}
+
+.main-header h1 {
+    font-size: 1.8em;
+}
+
+.main-header h1 a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.main-header nav ul li {
+    margin-left: 20px;
+}
+
+.main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Carrusel de imágenes */
+.carousel {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+
+.slide {
+    min-width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-text {
+    color: white;
+    font-size: 2.6em;
+    font-weight: bold;
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Estilos de los botones de control */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white; /* Solo la flecha será visible */
+    font-size: 4em;
+    border: none;
+    background: none; /* Elimina el fondo */
+    padding: 0; /* Quita el padding para evitar espacio adicional */
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+    height: 30vh;
+    background-color: rgba(139, 69, 19, 0.8); /* Color madera con transparencia */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-section h2 {
+    font-size: 2.4em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.8); /* Gris claro con algo de transparencia */
+    max-width: 800px; /* Limita el ancho del texto para facilitar la lectura */
+}
+
+/* Sección de servicios */
+.services-section {
+    height: 80vh;
+    background-color: rgba(210, 180, 140, 0.8); /* Color madera claro con transparencia */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.4em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las tarjetas de servicio */
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    max-width: 300px; /* Asegura un ancho máximo para todas las tarjetas */
+    height: 100%; /* Asegura que todas tengan la misma altura */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px; /* Ajusta la altura de la imagen */
+    object-fit: cover; /* La imagen se ajusta al contenedor, llenando el espacio asignado */
+    border-radius: 8px;
+}
+
+.service-card h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin: 15px 0 10px;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.service-card button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #8B4513; /* Color marrón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.service-card button:hover {
+    background-color: #A0522D; /* Color marrón más oscuro */
+}
+
+/* Sección de Preguntas Frecuentes */
+.faq-section {
+    padding: 20px;
+    background-color: rgba(210, 180, 140, 0.2); /* Color de fondo claro */
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 2.4em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.2em;
+    color: #8B4513; /* Color marrón para el texto */
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.5em;
+    color: #8B4513;
+    transition: transform 0.3s;
+}
+
+.faq-question.active::after {
+    content: '-';
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 10px;
+    font-size: 1em;
+    color: #555;
+    margin: 0;
+}
+
+/* Sección de Testimonios */
+.testimonial-section {
+    padding: 40px 20px;
+    /* background-color: rgba(210, 180, 140, 0.1); Color madera claro */
+    background-color: rgba(210, 180, 140, 0.8); /* Color madera claro */
+    text-align: center;
+}
+
+.testimonial-quote {
+    font-size: 1.8em;
+    font-style: italic;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.4;
+}
+
+.testimonial-author {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Sección de Contacto */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: rgba(210, 180, 140, 0.2); /* Fondo claro */
+}
+
+.contact-form, .contact-info {
+    width: 48%; /* Ancho para dividir el espacio */
+}
+
+.contact-form h2, .contact-info h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilos del Formulario */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #8B4513; /* Color marrón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #A0522D; /* Color marrón oscuro */
+}
+
+/* Estilos de la sección Sobre Nosotros */
+.contact-info {
+    width: 48%; /* Mantiene el tamaño en la disposición de dos columnas */
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info h2:nth-of-type(2) { /* Selecciona el segundo h2 en .contact-info */
+    margin-top: 50px; /* Añade un margen superior específico */
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Estilos de íconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 2em;
+    color: #8B4513; /* Color marrón para los iconos */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #A0522D; /* Marrón oscuro al pasar el ratón */
+}
+
+/* Estilos del pie de página */
+.footer-section {
+    background-color: #8B4513;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1em;
+    margin-top: auto; /* Asegura que el footer se empuje al final si el contenido no llena la pantalla */
+}
+
+/* Sección de la Galería */
+.gallery-section {
+    padding: 40px 20px;
+    background-color: rgba(210, 180, 140, 0.2); /* Fondo claro para consistencia */
+    text-align: center;
+    margin-top: 70px; /* Ajusta el valor para el espacio deseado debajo de la cabecera */
+}
+
+.gallery-section h2 {
+    font-size: 2.4em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.gallery-section p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Sección de Castañuelas */
+.castanuelas-section {
+    padding: 40px 20px;
+    background-color: rgba(210, 180, 140, 0.1); /* Fondo claro */
+    text-align: center;
+}
+
+.castanuelas-section h2 {
+    font-size: 2.4em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las tarjetas de castañuelas */
+.castanuelas-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.castanuelas-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px; /* Ajusta el tamaño de las tarjetas */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.castanuelas-card img {
+    width: 100%;
+    height: 250px; /* Imagen más grande */
+    object-fit: cover; /* Ajusta la imagen al contenedor */
+    border-radius: 8px;
+}
+
+.castanuelas-card h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin: 15px 0 10px;
+}
+
+.castanuelas-card button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #8B4513; /* Color marrón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.castanuelas-card button:hover {
+    background-color: #A0522D; /* Marrón más oscuro al pasar el ratón */
+}

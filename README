@@ -1,0 +1,14 @@
+mi-proyecto/
+├── index.html                          # Página de inicio
+├── pages/                              # Carpeta para páginas adicionales
+│   ├── galeria_castanuelas.html        # Página de "Galería de castañuelas"
+│   ├── detalle_castanuelas.html        # Página de "Detalle de la castañuela"
+│   └── contacto.html                   # Página de "Contacto"
+├── css/
+│   ├── styles.css                      # Archivo CSS principal
+│   └── galeria_castanuelas.css         # CSS específico para la página "Galeria Castañuelas" (opcional)
+├── js/         
+│   ├── script.js                       # Archivo JavaScript principal
+│   └── contacto.js                     # JavaScript específico para la página "Contacto" (opcional)
+└── images/
+    └── (imágenes del proyecto)

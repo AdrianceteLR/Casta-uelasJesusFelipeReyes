@@ -1,0 +1,155 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hacer que el cuerpo ocupe toda la altura de la ventana */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo siempre ocupe toda la altura */
+    margin: 0;
+    font-family: 'Comfortaa', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Contenedor principal para el contenido de la página */
+main {
+    flex: 1; /* Esto permite que el contenido principal ocupe todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabecera */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(210, 180, 140, 0.980);
+    color: white;
+    z-index: 1000;
+}
+
+.main-header h1 {
+    font-size: 1.8em;
+}
+
+.main-header h1 a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.main-header nav ul li {
+    margin-left: 20px;
+}
+
+.main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Galería */
+.gallery-section {
+    padding: 40px 20px;
+    background-color: rgba(210, 180, 140, 0.2);
+    text-align: center;
+    margin-top: 70px;
+}
+
+.gallery-section h2 {
+    font-size: 2.4em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.gallery-section p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Castañuelas */
+.castanuelas-section {
+    padding: 40px 20px;
+    background-color: rgba(210, 180, 140, 0.1);
+    text-align: center;
+}
+
+.castanuelas-section h2 {
+    font-size: 2.4em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.castanuelas-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.castanuelas-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.castanuelas-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.castanuelas-card h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin: 15px 0 10px;
+}
+
+.castanuelas-card button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #8B4513;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.castanuelas-card button:hover {
+    background-color: #A0522D;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #8B4513;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1em;
+    margin-top: auto; /* Asegura que el footer se empuje al final si el contenido no llena la pantalla */
+}

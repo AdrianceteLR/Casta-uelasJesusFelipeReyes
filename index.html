@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Castañuelas Jesús Felipe Reyes</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <!-- Cabecera -->
+        <header class="main-header">
+            <h1><a href="index.html">Castañuelas Jesús Felipe Reyes</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="pages/products.html">Productos</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Carrusel de imágenes -->
+        <section class="carousel">
+            <div class="carousel-images">
+                <!-- Slide final duplicado al inicio -->
+                <div class="slide" style="background-image: url('images/imagen3.jpg');">
+                    <p class="carousel-text">Transformando cada nota en una obra de arte única.</p>
+                </div>
+        
+                <!-- Slides originales -->
+                <div class="slide" style="background-image: url('images/imagen1.jpg');">
+                    <p class="carousel-text">Cada castañuela, una obra maestra de la artesanía</p>
+                </div>
+                <div class="slide" style="background-image: url('images/imagen2.jpg');">
+                    <p class="carousel-text">El sonido de la pasión, en cada golpe de nuestras castañuelas.</p>
+                </div>
+                <div class="slide" style="background-image: url('images/imagen3.jpg');">
+                    <p class="carousel-text">Transformando cada nota en una obra de arte única.</p>
+                </div>
+        
+                <!-- Slide inicial duplicado al final -->
+                <div class="slide" style="background-image: url('images/imagen1.jpg');">
+                    <p class="carousel-text">Cada castañuela, una obra maestra de la artesanía</p>
+                </div>
+            </div>
+            <!-- Botones de flechas -->
+            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+        </section>
+
+        <section class="welcome-section">
+            <h2>Bienvenido a Castañuelas Jesús Felipe Reyes</h2>
+            <p>En el corazón de Albacete, Castañuelas Jesús Felipe Reyes transforma cada pieza en una obra maestra de artesanía, combinando tradición y pasión.</p>
+        </section>
+        
+        <section class="services-section">
+            <h2>Servicios</h2>
+            <div class="service-cards">
+                <!-- Tarjeta 1 -->
+                <div class="service-card">
+                    <img src="images/servicio1.jpg" alt="Imagen del Servicio 1">
+                    <h3>Castañuelas Personalizadas</h3>
+                    <p>Personalizamos castañuelas según tus preferencias, garantizando un diseño único y sonido excepcional.</p>
+                    <button>Ver más</button>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="service-card">
+                    <img src="images/servicio2.jpg" alt="Imagen del Servicio 2">
+                    <h3>Postizas Personalizadas</h3>
+                    <p>Personalizamos postizas según tus preferencias, garantizando un diseño único y sonido excepcional.</p>
+                    <button>Ver más</button>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="service-card">
+                    <img src="images/servicio3.jpg" alt="Imagen del Servicio 3">
+                    <h3>Reparación y Mantenimiento</h3>
+                    <p>Mantenemos tus castañuelas en óptimas condiciones, asegurando rendimiento y calidad constante.</p>
+                    <button>Ver más</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">¿Cómo se fabrican las castañuelas?</button>
+                <div class="faq-answer">
+                    <p>Las castañuelas se fabrican cuidadosamente a mano, utilizando materiales seleccionados y técnicas tradicionales que aseguran la mejor calidad y sonido.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">¿Cuánto tiempo tarda un pedido personalizado?</button>
+                <div class="faq-answer">
+                    <p>El tiempo de un pedido personalizado puede variar, pero generalmente toma entre 2 a 3 semanas para asegurar la mejor artesanía.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">¿Ofrecen envíos internacionales?</button>
+                <div class="faq-answer">
+                    <p>Sí, ofrecemos envíos internacionales. Trabajamos con varias empresas de transporte para asegurar que las castañuelas lleguen a cualquier lugar del mundo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">¿Qué tipos de materiales utilizan?</button>
+                <div class="faq-answer">
+                    <p>Utilizamos materiales de alta calidad, como maderas seleccionadas y fibras sintéticas duraderas, para garantizar un excelente sonido y resistencia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <p class="testimonial-quote">"La mejor experiencia con castañuelas artesanales que he tenido. La calidad y el sonido son inigualables."</p>
+            <p class="testimonial-author">[María García]</p>
+        </section>
+        
+        <section class="contact-section">
+            <!-- Formulario de Contacto -->
+            <div class="contact-form">
+                <h2>Contáctanos</h2>
+                <form action="#" method="POST">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        
+            <!-- Ubicación y Redes Sociales -->
+            <div class="contact-info">
+                <h2>Sobre Nosotros</h2>
+                <p>Con raíces en el corazón de Albacete, Castañuelas Jesús Felipe Reyes ha estado dedicándose a la creación de castañuelas artesanales por más de 20 años. Nuestra pasión y compromiso por la calidad se reflejan en cada pieza que fabricamos, combinando técnicas tradicionales con los mejores materiales.</p>
+                
+                <h2>Ubicación</h2> <!-- Cambiado a h2 para igualar el estilo de título -->
+                <p>Albacete, España</p>
+                
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                </div>
+            </div>        
+        </section>
+        
+        <footer class="footer-section">
+            <p>© 2024 Castañuelas Jesús Felipe Reyes</p>
+        </footer>
+        
+        <script src="js/script.js"></script>
+    </body>
+</html>

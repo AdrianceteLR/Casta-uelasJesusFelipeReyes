@@ -1,0 +1,212 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hacer que el cuerpo ocupe toda la altura de la ventana */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo siempre ocupe toda la altura */
+    margin: 0;
+    font-family: 'Comfortaa', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Contenedor principal para el contenido de la página */
+main {
+    flex: 1; /* Esto permite que el contenido principal ocupe todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabecera */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(210, 180, 140, 0.980);
+    color: white;
+    z-index: 1000;
+}
+
+.main-header h1 {
+    font-size: 1.8em;
+}
+
+.main-header h1 a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.main-header nav ul li {
+    margin-left: 20px;
+}
+
+.main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Galería */
+.gallery-section {
+    padding: 40px 20px;
+    background-color: rgba(210, 180, 140, 0.2);
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.gallery-section h2 {
+    font-size: 2.4em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.gallery-section p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Categorías */
+.categories-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en filas nuevas */
+}
+
+.category-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 45%; /* Ocupa el 45% del contenedor */
+    max-width: 700px; /* Máximo ancho para evitar deformación */
+    height: 700px; /* Cambiar a auto para ajustar a contenido */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Espaciado entre elementos internos */
+    padding: 20px;
+}
+
+.category-card img {
+    width: auto; /* Llenar todo el ancho de la tarjeta */
+    height: 70%; /* Ajustar automáticamente la altura */
+    object-fit: cover; /* Asegura que la imagen mantenga proporciones */
+    border-radius: 8px 8px 0 0; /* Redondeo en la parte superior */
+}
+
+.category-card h3 {
+    font-size: 2em;
+    color: #333;
+    margin: 20px 0 15px;
+}
+
+.category-card button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    color: white;
+    background-color: #8B4513;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category-card button:hover {
+    background-color: #A0522D;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #8B4513;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1em;
+    margin-top: auto; /* Asegura que el footer se empuje al final si el contenido no llena la pantalla */
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .categories-cards {
+        gap: 20px; /* Reduce el espacio entre tarjetas */
+    }
+
+    .category-card {
+        width: 100%; /* Ocupa el 100% del ancho del contenedor */
+        height: 400px; /* Reduce la altura en pantallas más pequeñas */
+    }
+
+    .category-card h3 {
+        font-size: 1.8em;
+    }
+
+    .category-card button {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-card {
+        height: 350px; /* Ajusta la altura para dispositivos más pequeños */
+    }
+
+    .category-card h3 {
+        font-size: 1.6em;
+    }
+
+    .category-card button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-section h2 {
+        font-size: 2em; /* Reduce el tamaño del texto */
+    }
+
+    .gallery-section p {
+        font-size: 1em; /* Reduce el tamaño del texto */
+    }
+
+    .categories-cards {
+        flex-direction: column; /* Coloca las tarjetas en una columna */
+        gap: 20px;
+    }
+
+    .category-card {
+        width: 90%; /* Reduce el ancho de las tarjetas */
+        margin: 0 auto; /* Centra las tarjetas */
+        height: 300px; /* Ajusta la altura */
+    }
+
+    .category-card h3 {
+        font-size: 1.5em;
+    }
+
+    .category-card button {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+}
