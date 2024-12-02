@@ -1,7 +1,7 @@
 let currentIndex = 1; // Comenzamos en el primer slide original
 const slides = document.querySelectorAll('.carousel .slide');
 const totalSlides = slides.length;
-const slideInterval = 3000;
+const slideInterval = 5000;
 const carouselImages = document.querySelector('.carousel-images');
 
 function updateSlidePosition(transition = true) {
