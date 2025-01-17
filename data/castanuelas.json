@@ -13,7 +13,7 @@
             "nombre": "Castañuela Modelo 1",
             "descripcion": "Variante del modelo 1 con acabados especiales.",
             "imagen": "../images/castanuela1.jpg",
-            "precio": 55.00,
+            "precio": 85.00,
             "disponibilidad": true
         },
         {
