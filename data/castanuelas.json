@@ -27,7 +27,7 @@
         {
             "id": 4,
             "nombre": "Castañuela Modelo 3",
-            "descripcion": "Modelo 3 de nuestras castañuelas, fabricadas a mano con un diseño elegante.",
+            "descripcion": "Modelo 3 de nuestras castañuelas, fabricadas a mano con un diseño elegante.<br>Modelo 3 de nuestras castañuelas, fabricadas a mano con un diseño elegante.<br><br>Modelo 3 de nuestras castañuelas, fabricadas a mano con un diseño elegante.<br>Modelo 3 de nuestras castañuelas, fabricadas a mano con un diseño elegante.<br><br>Modelo 3 de nuestras castañuelas, fabricadas a mano con un diseño elegante.",
             "imagen": "../images/castanuela3.jpg",
             "precio": 65.00,
             "disponibilidad": true

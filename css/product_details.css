@@ -5,19 +5,17 @@
     box-sizing: border-box;
 }
 
-/* Hacer que el cuerpo ocupe toda la altura de la ventana */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Asegura que el cuerpo siempre ocupe toda la altura */
+    min-height: 100vh;
     margin: 0;
     font-family: 'Comfortaa', sans-serif;
     overflow-x: hidden;
 }
 
-/* Contenedor principal para el contenido de la página */
 main {
-    flex: 1; /* Esto permite que el contenido principal ocupe todo el espacio disponible */
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
@@ -99,12 +97,8 @@ main {
 
 .product-details-cards {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
     margin: 20px auto;
-    max-width: 1200px;
 }
 
 .product-details-card {
@@ -112,36 +106,48 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    flex: 1;
-    max-width: 600px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    display: flex; /* Organiza la tarjeta como fila */
+    flex-direction: row; /* Imagen a la izquierda, contenido a la derecha */
+    gap: 75px;
     padding: 20px;
 }
 
-.product-details-card img {
-    width: 100%;
-    max-width: 500px;
+.product-image {
+    width: 50%; /* Imagen ocupa la mitad del ancho */
+    max-width: 400px;
+}
+
+.product-image img {
+    width: 100%; /* Imagen llena el contenedor */
     border-radius: 8px;
     object-fit: cover;
-    margin: 0 auto 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.product-details-card h3 {
+.product-info {
+    width: 50%; /* Contenido textual ocupa la otra mitad */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: flex-start; /* Empieza desde arriba */
+    text-align: left;
+    gap: 30px; /* Espacio entre los elementos */
+}
+
+.product-info h3 {
     font-size: 2em;
     color: #333;
-    margin-bottom: 20px;
 }
 
-.product-details-card p {
+.product-info p {
     font-size: 1.2em;
     color: #555;
-    margin-bottom: 20px;
     line-height: 1.6;
+    text-align: left;
 }
 
-.product-details-card button {
+.product-info button {
     padding: 15px 30px;
     font-size: 1.2em;
     color: white;
@@ -150,11 +156,13 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    align-self: flex-start; /* Botón alineado al inicio del contenido */
 }
 
-.product-details-card button:hover {
+.product-info button:hover {
     background-color: #A0522D;
 }
+
 
 /* Footer */
 .footer-section {
@@ -163,5 +171,5 @@ main {
     padding: 20px 0;
     text-align: center;
     font-size: 1em;
-    margin-top: auto; /* Asegura que el footer se empuje al final si el contenido no llena la pantalla */
+    margin-top: auto;
 }
