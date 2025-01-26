@@ -3,7 +3,7 @@
         {
             "id": 1,
             "nombre": "Postizas Modelo 1",
-            "descripcion": "Castañuelas artesanales modelo 1, fabricadas con madera de alta calidad y sonido único.",
+            "descripcion": "Postizas artesanales modelo 1, fabricadas con madera de alta calidad y sonido único.",
             "imagen": "../images/castanuela.jpg",
             "precio": 50.00,
             "disponibilidad": true
@@ -19,7 +19,7 @@
         {
             "id": 3,
             "nombre": "Postizas Modelo 2",
-            "descripcion": "Castañuelas modelo 2, ideales para profesionales y con un sonido envolvente.",
+            "descripcion": "Postizas modelo 2, ideales para profesionales y con un sonido envolvente.",
             "imagen": "../images/castanuela2.jpg",
             "precio": 60.00,
             "disponibilidad": false
@@ -41,7 +41,7 @@
             "disponibilidad": true
         },
         {
-            "id": 5,
+            "id": 6,
             "nombre": "Postizas Modelo 3",
             "descripcion": "Otra variante del modelo 3 con detalles personalizados.",
             "imagen": "../images/castanuela4.jpg",
@@ -49,7 +49,7 @@
             "disponibilidad": true
         },
         {
-            "id": 5,
+            "id": 7,
             "nombre": "Postizas Modelo 3",
             "descripcion": "Otra variante del modelo 3 con detalles personalizados.",
             "imagen": "../images/castanuela4.jpg",
@@ -57,7 +57,7 @@
             "disponibilidad": true
         },
         {
-            "id": 5,
+            "id": 8,
             "nombre": "Postizas Modelo 31",
             "descripcion": "Otra variante del modelo 31 con detalles personalizados.",
             "imagen": "../images/castanuela4.jpg",

@@ -45,14 +45,14 @@
                 .then(response => response.json())
                 .then(data => {
                     const container = document.getElementById('castanuelas-container');
-                    data.postizas.forEach(castanuela => {
+                    data.postizas.forEach(postizas => {
                         const card = document.createElement('div');
                         card.classList.add('castanuelas-card');
 
                         card.innerHTML = `
-                            <img src="${castanuela.imagen}" alt="${castanuela.nombre}">
-                            <h3>${castanuela.nombre}</h3>
-                            <button>Ver más</button>
+                            <img src="${postizas.imagen}" alt="${postizas.nombre}">
+                            <h3>${postizas.nombre}</h3>
+                            <button onclick="window.location.href='product_details_postizas.html?id=${postizas.id}'">Ver más</button>
                         `;
 
                         container.appendChild(card);
