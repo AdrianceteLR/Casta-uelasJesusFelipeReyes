@@ -4,7 +4,7 @@
             "id": 1,
             "nombre": "Castañuela Modelo 1",
             "descripcion": "Castañuelas artesanales modelo 1, fabricadas con madera de alta calidad y sonido único.",
-            "imagen": "../images/castanuela.jpg",
+            "imagen": "../../images/castanuela.jpg",
             "precio": 50.00,
             "disponibilidad": true
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "nombre": "Castañuela Modelo 1",
             "descripcion": "Variante del modelo 1 con acabados especiales.",
-            "imagen": "../images/castanuela1.jpg",
+            "imagen": "../../images/castanuela1.jpg",
             "precio": 85.00,
             "disponibilidad": true
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "nombre": "Castañuela Modelo 2",
             "descripcion": "Castañuelas modelo 2, ideales para profesionales y con un sonido envolvente.",
-            "imagen": "../images/castanuela2.jpg",
+            "imagen": "../../images/castanuela2.jpg",
             "precio": 60.00,
             "disponibilidad": false
         },
@@ -28,7 +28,7 @@
             "id": 4,
             "nombre": "Castañuela Modelo 3",
             "descripcion": "Modelo 3 de nuestras castañuelas, fabricadas a mano con un diseño elegante.<br>Modelo 3 de nuestras castañuelas, fabricadas a mano con un diseño elegante.<br><br>Modelo 3 de nuestras castañuelas, fabricadas a mano con un diseño elegante.<br>Modelo 3 de nuestras castañuelas, fabricadas a mano con un diseño elegante.<br><br>Modelo 3 de nuestras castañuelas, fabricadas a mano con un diseño elegante.",
-            "imagen": "../images/castanuela3.jpg",
+            "imagen": "../../images/castanuela3.jpg",
             "precio": 65.00,
             "disponibilidad": true
         },
@@ -36,7 +36,7 @@
             "id": 5,
             "nombre": "Castañuela Modelo 4",
             "descripcion": "Otra variante del modelo 3 con detalles personalizados.",
-            "imagen": "../images/castanuela4.jpg",
+            "imagen": "../../images/castanuela4.jpg",
             "precio": 70.00,
             "disponibilidad": true
         }

@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../css/product_details.css">
+        <link rel="stylesheet" href="../../css/products/product_details.css">
     </head>
     <body>
         <!-- Cabecera con color sólido -->
@@ -37,10 +37,10 @@
             const urlParams = new URLSearchParams(window.location.search);
             const productId = parseInt(urlParams.get('id'));
 
-            fetch('../data/castanuelas.json')
+            fetch('../../data/postizas.json')
                 .then(response => response.json())
                 .then(data => {
-                    const product = data.castanuelas.find(c => c.id === productId);
+                    const product = data.postizas.find(c => c.id === productId);
                     if (product) {
                         const titleElement = document.getElementById('product-title');
                         titleElement.textContent = product.nombre;

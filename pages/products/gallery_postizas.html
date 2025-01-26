@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Galeria de Castañuelas | Castañuelas Jesús Felipe Reyes</title>
+        <title>Galeria de Postizas | Castañuelas Jesús Felipe Reyes</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../css/gallery_castanuelas.css"> 
+        <link rel="stylesheet" href="../../css/products/gallery_postizas.css"> 
     </head>
     <body> 
         
@@ -25,12 +25,12 @@
         <!-- Sección de Galería -->
         <section class="gallery-section">
             <h2>Galería</h2>
-            <p>Bienvenidos a nuestra galería. Aquí encontrará una selección de nuestras castañuelas artesanales, cada una
+            <p>Bienvenidos a nuestra galería. Aquí encontrará una selección de nuestras postizas artesanales, cada una
                 fabricada con esmero y dedicación para asegurar la mejor calidad y un sonido único.</p>
         </section>
 
         <section class="castanuelas-section">
-            <h2>Nuestras Castañuelas</h2>
+            <h2>Nuestras Postizas</h2>
             <div class="castanuelas-cards" id="castanuelas-container">
                 <!-- Las castañuelas se cargarán dinámicamente aquí -->
             </div>
@@ -41,18 +41,18 @@
         </footer>
 
         <script>
-            fetch('../data/castanuelas.json')
+            fetch('../../data/postizas.json')
                 .then(response => response.json())
                 .then(data => {
                     const container = document.getElementById('castanuelas-container');
-                    data.castanuelas.forEach(castanuela => {
+                    data.postizas.forEach(postizas => {
                         const card = document.createElement('div');
                         card.classList.add('castanuelas-card');
 
                         card.innerHTML = `
-                            <img src="${castanuela.imagen}" alt="${castanuela.nombre}">
-                            <h3>${castanuela.nombre}</h3>
-                            <button onclick="window.location.href='product_details.html?id=${castanuela.id}'">Ver más</button>
+                            <img src="${postizas.imagen}" alt="${postizas.nombre}">
+                            <h3>${postizas.nombre}</h3>
+                            <button onclick="window.location.href='product_details_postizas.html?id=${postizas.id}'">Ver más</button>
                         `;
 
                         container.appendChild(card);
@@ -61,6 +61,6 @@
                 .catch(error => console.error('Error al cargar el JSON:', error));
         </script>
 
-        <script src="../js/script.js"></script>
+        <script src="../../js/script.js"></script>
     </body>
 </html>
